@@ -1,0 +1,15 @@
+        a[i] = iota(i, value);
+    }
+    
+    for(int i = 0;i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+​
+int main()
+{
+    test();
+    return 0;
+}

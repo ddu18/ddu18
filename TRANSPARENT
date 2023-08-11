@@ -1,0 +1,12 @@
+   initgraph(WIN_WIDTH, WIN_HEIGHT, 1);
+    LOGFONT f;
+    gettextstyle(&f);               
+    f.lfWidth = 15;
+    strcpy(f.lfFaceName, "Segoe UI Black");
+    f.lfQuality = ANTIALIASED_QUALITY; 
+    settextstyle(&f);                 
+    setbkmode(TRANSPARENT);
+    setcolor(BLACK);
+ 
+    mciSendString("play res/bg.mp3 repeat", 0, 0, 0);
+}

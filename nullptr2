@@ -1,0 +1,13 @@
+~HashTable()
+		{
+			for (auto& cur : _tables)
+			{
+				while (cur)
+				{
+					Node* next = cur->_next;
+					delete cur;
+					cur = next;
+				}
+				cur = nullptr;
+			}
+		}

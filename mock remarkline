@@ -1,0 +1,42 @@
+"mock num array": {
+        "prefix": ["arrnum"],
+        "body": [
+            "let ${1:arrnum} = [1, 2, 3, 4, 5, 6];",
+            "$2"
+        ],
+        "description": "mock a number array"
+    },
+    "mock object": {
+        "prefix": ["obj"],
+        "body": [
+            "$LINE_COMMENT--snippets for obj(javascript)",
+            "let ${1:obj} = {\n\tname: 'tom',\n\tage: 12,\n\tgender: 'man',\n\ttime: $CURRENT_SECONDS_UNIX,\n\tfilename: '$TM_FILENAME',\n\tfilepath: '$TM_FILEPATH',\n\thobby: 'football'\n};",
+            "$2"
+        ],
+        "description": "mock a object"
+    },
+    "mock getUrlPara": {
+        "prefix": ["getUrlPara"],
+        "body": [
+            "$LINE_COMMENT--获取url参数",
+            "function getUrlPara(name) {",
+            "var reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");",
+            "var r = window.location.search.substr(1).match(reg);",
+            "if (r != null) return (r[2]);",
+            "return null;",
+            "}",
+            "",
+            "console.log(getUrlPara(\"id\"));",
+            "$2"
+        ],
+        "description": "mock a getUrlPara"
+    },
+    "mock remarkline": {
+        "prefix": ["remarkline", "jsline"],
+        "body": [
+            "$BLOCK_COMMENT_START-----------------------------------------------------$BLOCK_COMMENT_END",
+            "$2"
+        ],
+        "description": "mock a remarkline"
+    },
+}
